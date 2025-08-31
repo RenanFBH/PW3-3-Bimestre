@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="../css/estilo.css">	
 		<title>CRUD com Bootstrap</title>
 	</head>
-	<body style="background:url('css/bg2.jpg') no-repeat center; background-size:cover;">   
+	<body style="background:url('../css/bg2.jpg') no-repeat center; background-size:cover;">   
 		<nav class="navbar" style="background-color: #13070d;" data-bs-theme="light">
 			<div class="container-fluid">
 				<a class="navbar-brand" style="color:#fff" href="{{ route('gerentes.index') }}">Gerentes</a>
@@ -25,7 +25,7 @@
 		<main>
 			<div class="container">
 				<h3 class="mt-3 text-center" style="background-color:#f9f6f4; padding:10px; border-radius:10px;">TABELA DE CRUD DE GERENTES</h3>
-					@yield('content')
+@yield('content')
 			</div>
 		</main>
 		<!-- Footer -->
