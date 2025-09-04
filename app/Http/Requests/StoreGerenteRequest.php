@@ -25,7 +25,7 @@ class StoreGerenteRequest extends FormRequest
             'nome' => 'required|string|max:50',
             'endereco' => 'required|string|max:50',
             'depto' => 'required|string|max:20',
-            'datanasc' => 'required|datetime',
+            'datanasc' => 'required|date',
             'foto' => 'nullable|string|max:30'
         ];
     }

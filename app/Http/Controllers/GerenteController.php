@@ -16,7 +16,7 @@ class GerenteController extends Controller
     public function index() : View
     {
         return view('gerentes.index', [
-            'gerentes' => gerente::latest()->paginate(3)
+            'gerentes' => gerente::latest()->paginate(10)
         ]);
     }
 
@@ -36,7 +36,7 @@ class GerenteController extends Controller
         Gerente::create($request->validated());
 
         return redirect()->route('gerentes.index')
-                ->withSuccess('New Gerente is added successfully.');
+                ->withSuccess('Gerente adicionado com sucesso!');
     }
 
     /**
@@ -63,7 +63,7 @@ class GerenteController extends Controller
         $gerente->update($request->validated());
 
         return redirect()->back()
-                ->withSuccess('Gerente is updated successfully.');
+                ->withSuccess('Gerente alterado com sucesso!');
     }
 
     /**
@@ -74,6 +74,6 @@ class GerenteController extends Controller
         $gerente->delete();
 
         return redirect()->route('gerentes.index')
-                ->withSuccess('Gerente is deleted successfully.');
+                ->withSuccess('Gerente deletado com sucesso!');
     }
 }

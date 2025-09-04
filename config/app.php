@@ -1,5 +1,8 @@
 <?php
 
+if ( !defined("BASEURL") )
+		define("BASEURL", "../");
+
 return [
 
     /*

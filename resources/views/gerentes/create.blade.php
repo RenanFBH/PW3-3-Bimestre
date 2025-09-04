@@ -1,5 +1,6 @@
 @extends('layouts.app')
-@section('content')
+@section('title', 'CRUD - Criar gerente')
+@section('conteudo')
 				<div class="row justify-content-center mt-3">
 					<div class="col-md-8">
 						<div class="card">
@@ -61,7 +62,7 @@
 									<div class="mb-3 row">
 										<label for="datanasc" class="col-md-4 col-form-label text-md-end text-start">Data de Nascimento</label>
 										<div class="col-md-6">
-										  <input type="date" step="0.01" class="form-control @error('datanasc') is-invalid @enderror" id="datanasc" name="datanasc" value="{{ old('datanasc') }}">
+										  	<input type="date" step="0.01" class="form-control @error('datanasc') is-invalid @enderror" id="datanasc" name="datanasc" value="{{ old('datanasc') }}">
 @error('datanasc')
 												<span class="text-danger">{{ $message }}</span>
 @enderror
@@ -70,7 +71,7 @@
 									<div class="mb-3 row">
 										<label for="foto" class="col-md-4 col-form-label text-md-end text-start">Foto</label>
 										<div class="col-md-6">
-											<textarea class="form-control @error('foto') is-invalid @enderror" id="foto" name="foto">{{ old('foto') }}</textarea>
+											<input type="text" class="form-control @error('foto') is-invalid @enderror" id="foto" name="foto">{{ old('foto') }}</input>
 @error('foto')
 												<span class="text-danger">{{ $message }}</span>
 @enderror

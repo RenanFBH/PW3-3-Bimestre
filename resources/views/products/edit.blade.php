@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'CRUD - Editar gerente')
+@section('title', 'CRUD - Editar produto')
 @section('conteudo')
 
 <div class="row justify-content-center mt-3">
@@ -14,62 +14,62 @@
         <div class="card">
             <div class="card-header">
                 <div class="float-start">
-                    Edit Gerente
+                    Edit Product
                 </div>
                 <div class="float-end">
-                    <a href="{{ route('gerentes.index') }}" class="btn btn-primary btn-sm">&larr; Back</a>
+                    <a href="{{ route('products.index') }}" class="btn btn-primary btn-sm">&larr; Back</a>
                 </div>
             </div>
             <div class="card-body">
-                <form action="{{ route('gerentes.update', $gerente->id) }}" method="post">
+                <form action="{{ route('products.update', $product->id) }}" method="post">
                     @csrf
                     @method("PUT")
 
                     <div class="mb-3 row">
-                        <label for="nome" class="col-md-4 col-form-label text-md-end text-start">Nome</label>
+                        <label for="code" class="col-md-4 col-form-label text-md-end text-start">Code</label>
                         <div class="col-md-6">
-                          <input type="text" class="form-control @error('nome') is-invalid @enderror" id="nome" name="nome" value="{{ $gerente->nome }}">
-                            @error('nome')
+                          <input type="text" class="form-control @error('code') is-invalid @enderror" id="code" name="code" value="{{ $product->code }}">
+                            @error('code')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
 
                     <div class="mb-3 row">
-                        <label for="endereco" class="col-md-4 col-form-label text-md-end text-start">Endereço</label>
+                        <label for="name" class="col-md-4 col-form-label text-md-end text-start">Name</label>
                         <div class="col-md-6">
-                          <input type="text" class="form-control @error('endereco') is-invalid @enderror" id="endereco" name="endereco" value="{{ $gerente->endereco }}">
-                            @error('endereco')
+                          <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ $product->name }}">
+                            @error('name')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
 
                     <div class="mb-3 row">
-                        <label for="depto" class="col-md-4 col-form-label text-md-end text-start">Depto</label>
+                        <label for="quantity" class="col-md-4 col-form-label text-md-end text-start">Quantity</label>
                         <div class="col-md-6">
-                          <input type="number" class="form-control @error('depto') is-invalid @enderror" id="depto" name="depto" value="{{ $gerente->depto }}">
-                            @error('depto')
+                          <input type="number" class="form-control @error('quantity') is-invalid @enderror" id="quantity" name="quantity" value="{{ $product->quantity }}">
+                            @error('quantity')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
 
                     <div class="mb-3 row">
-                        <label for="datanasc" class="col-md-4 col-form-label text-md-end text-start">Datanasc</label>
+                        <label for="price" class="col-md-4 col-form-label text-md-end text-start">Price</label>
                         <div class="col-md-6">
-                          <input type="number" step="0.01" class="form-control @error('datanasc') is-invalid @enderror" id="datanasc" name="datanasc" value="{{ $gerente->datanasc }}">
-                            @error('datanasc')
+                          <input type="number" step="0.01" class="form-control @error('price') is-invalid @enderror" id="price" name="price" value="{{ $product->price }}">
+                            @error('price')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
 
                     <div class="mb-3 row">
-                        <label for="foto" class="col-md-4 col-form-label text-md-end text-start">Foto</label>
+                        <label for="description" class="col-md-4 col-form-label text-md-end text-start">Description</label>
                         <div class="col-md-6">
-                            <textarea class="form-control @error('foto') is-invalid @enderror" id="foto" name="foto">{{ $gerente->Foto }}</textarea>
-                            @error('foto')
+                            <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description">{{ $product->description }}</textarea>
+                            @error('description')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
